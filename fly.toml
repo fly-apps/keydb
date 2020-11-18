@@ -1,0 +1,18 @@
+app = "keydb-example"
+
+[mount]
+source = "keydb_server"
+destination = "/data"
+
+
+[[services]]
+  internal_port = 6379
+  protocol = "tcp"
+
+  [[services.ports]]
+    handlers = []
+    port = "10000"
+
+  [[services.tcp_checks]]
+    interval = 10000
+    timeout = 2000
