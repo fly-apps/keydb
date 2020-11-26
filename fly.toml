@@ -1,5 +1,8 @@
 app = "keydb-example"
 
+[experimental]
+private_network = true
+
 [mount]
 source = "keydb_server"
 destination = "/data"
