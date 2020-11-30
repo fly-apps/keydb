@@ -16,6 +16,8 @@ destination = "/data"
     handlers = []
     port = "10000"
 
-  [[services.tcp_checks]]
-    interval = 10000
-    timeout = 2000
+
+  [[services.script_checks]]
+    interval = 2000
+    timeout = 1000
+    command = "/usr/bin/check-replicas.sh"
