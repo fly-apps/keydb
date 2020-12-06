@@ -17,7 +17,14 @@ destination = "/data"
     port = "10000"
 
 
-  [[services.script_checks]]
-    interval = 2000
-    timeout = 1000
-    command = "/usr/bin/check-replicas.sh"
+[[services.script_checks]]
+  interval = 5000
+  timeout = 1000
+  command = "/fly/check_ready.sh"
+  restart_limit = 0
+
+[[services.script_checks]]
+  interval = 5000
+  timeout = 1000
+  command = "/fly/check_replicas.sh"
+  restart_limit = 0

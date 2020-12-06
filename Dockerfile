@@ -1,7 +1,11 @@
 FROM "eqalpha/keydb:x86_64_v6.0.16"
 RUN apt-get update && apt-get install -yq dnsutils vim-tiny && apt-get clean && rm -rf /var/lib/apt/lists
 
-ADD scripts/* /usr/bin/
+ADD fly /fly/
 ADD keydb.conf /etc/
 
-CMD ["start.sh"]
+# Run with exporter
+CMD ["/fly/hivemind", "/fly/Procfile"]
+
+# Just run
+# CMD ["/fly/start_keydb.sh"]
