@@ -1,4 +1,5 @@
-FROM "eqalpha/keydb:x86_64_v6.0.16"
+FROM eqalpha/keydb:alpine_x86_64_v6.2.0
+
 RUN apt-get update && apt-get install -yq dnsutils vim-tiny && apt-get clean && rm -rf /var/lib/apt/lists
 
 ADD fly /fly/
