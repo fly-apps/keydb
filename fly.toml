@@ -4,3 +4,6 @@ app = "keydb-multimaster-example"
 source = "keydb_server"
 destination = "/data"
 
+[metrics]
+  port = 9121
+  path = "/metrics"

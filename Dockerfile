@@ -7,6 +7,3 @@ ADD keydb.conf /etc/
 
 # Run with Prometheus stats exporter
 CMD ["/fly/hivemind", "/fly/Procfile"]
-
-# Run without Prometheus
-# CMD ["/fly/start_keydb.sh"]
